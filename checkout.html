@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        .color{
+            color: #7a7a7a!important;
+        }
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <img src="./ảnh/logo.png" alt="Logo" style="width: 45px; height: 45px; margin-right: 10px;">
+                TD Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Giỏ Hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Thanh Toán</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Liên Hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Form -->
+    <div class="container mt-5">
+        <h2>Thông Tin Thanh Toán</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Địa chỉ</label>
+                <input type="text" class="form-control" id="address" placeholder="123 Đường ABC, TP.HCM">
+            </div>
+            <div class="mb-3">
+                <label for="card" class="form-label">Số thẻ tín dụng</label>
+                <input type="text" class="form-control" id="card" placeholder="1234 5678 9101 1121">
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                <span class="input-group-text" onclick="togglePasswordVisibility()" style="cursor: pointer;">
+                    <img src="https://img.icons8.com/ios-filled/24/000000/visible.png" alt="Hiện mật khẩu"
+                        id="eye-icon">
+                </span>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="submitPayment()">Thanh Toán</button>
+
+        </form>
+    </div>
+
+    <footer class="text-center py-3 mt-5 color">
+        <p>&copy; From TD Shop with love <i class="fa-solid fa-heart"></i></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const eyeIcon = document.getElementById("eye-icon");
+    
+            // Kiểm tra kiểu của trường nhập mật khẩu và thay đổi giữa password và text
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text"; // Hiện mật khẩu
+                eyeIcon.src = "https://img.icons8.com/ios-filled/24/000000/invisible.png"; // Biểu tượng mắt "ẩn"
+            } else {
+                passwordInput.type = "password"; // Ẩn mật khẩu
+                eyeIcon.src = "https://img.icons8.com/ios-filled/24/000000/visible.png"; // Biểu tượng mắt "hiện"
+            }
+        }
+
+        
+    </script>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const eyeIcon = document.getElementById("eye-icon");
+
+        // Kiểm tra kiểu của trường nhập mật khẩu và thay đổi giữa password và text
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text"; // Hiện mật khẩu
+            eyeIcon.src = "https://img.icons8.com/ios-filled/24/000000/invisible.png"; // Biểu tượng mắt "ẩn"
+        } else {
+            passwordInput.type = "password"; // Ẩn mật khẩu
+            eyeIcon.src = "https://img.icons8.com/ios-filled/24/000000/visible.png"; // Biểu tượng mắt "hiện"
+        }
+    }
+
+    function submitPayment() {
+        // Hiển thị thông báo thành công
+        alert("Giao dịch thành công");
+
+        // Nếu bạn muốn thực hiện các hành động khác sau khi thanh toán, bạn có thể thêm vào đây.
+    }
+</script>
+
+    </script>
+    
+    <script>(function(w, d) { w.CollectId = "67229afe48b2ba247e880a9b"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+</body>
+
+</html>
